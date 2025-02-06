@@ -401,10 +401,10 @@ const ua: SynapseTranslationMessages = {
       },
     },
     user_media_statistics: {
-      name: "Users' media",
+      name: "Медіа користувачів",
       fields: {
-        media_count: "Media count",
-        media_length: "Media length",
+        media_count: "Кількість файлів",
+        media_length: "Розмір файлів",
       },
     },
     forward_extremities: {
