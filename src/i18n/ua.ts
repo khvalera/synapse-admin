@@ -37,12 +37,12 @@ const ua: SynapseTranslationMessages = {
       tabs: {
         basic: "Основні",
         members: "Учасники",
-        detail: "Подробиці",
+        detail: "Детально",
         permission: "Дозволи",
         media: "Медіа",
       }
     },
-    reports: { tabs: { basic: "Basic", detail: "Details" } },
+    reports: { tabs: { basic: "Основні", detail: "Детально" } },
   },
   import_users: {
     error: {
@@ -108,31 +108,31 @@ const ua: SynapseTranslationMessages = {
   delete_media: {
     name: "Media",
     fields: {
-      before_ts: "last access before",
-      size_gt: "Larger then (in bytes)",
-      keep_profiles: "Keep profile images",
+      before_ts: "останній доступ раніше ніж:",
+      size_gt: "розмір більше ніж (у байтах):",
+      keep_profiles: "Залишити зображення профілів користувачів",
     },
     action: {
-      send: "Delete media",
-      send_success: "Request successfully sent.",
-      send_failure: "An error has occurred.",
+      send: "Видалити медіафайли",
+      send_success: "Запит успішно відправлено.",
+      send_failure: "Сталася помилка.",
     },
     helper: {
-      send: "This API deletes the local media from the disk of your own server. This includes any local thumbnails and copies of media downloaded. This API will not affect media that has been uploaded to external media repositories.",
+      send: "Цей API видаляє локальні медіа з диска вашого власного сервера. Це включає будь-які локальні мініатюри та копії завантажених медіафайлів. Цей API не впливатиме на медіафайли, які було завантажено до зовнішніх сховищ медіафайлів.",
     },
   },
   purge_remote_media: {
     name: "Remote Media",
     fields: {
-      before_ts: "last access before",
+      before_ts: "останній доступ раніше ніж:",
     },
     action: {
-      send: "Purge remote media",
-      send_success: "Purge remote media request has been sent.",
-      send_failure: "An error has occurred with the purge remote media request.",
+      send: "Очистити віддалені медіа",
+      send_success: "Запит на видалення віддалених медіа надіслано.",
+      send_failure: "Під час запиту на очищення віддалених медіа сталася помилка.",
     },
     helper: {
-      send: "This API purges the remote media cache from the disk of your own server. This includes any local thumbnails and copies of media downloaded. This API will not affect media that has been uploaded to the server's own media repository.",
+      send: "Цей API очищає кеш віддалених медіа файлів із вашого сервера. Це включає будь-які локальні мініатюри та копії завантажених медіафайлів. Цей API не впливатиме на медіафайли, які було завантажено у власне сховище медіафайлів сервера.",
     },
   },
   resources: {
@@ -160,7 +160,7 @@ const ua: SynapseTranslationMessages = {
         password: "Пароль",
         avatar_url: "Avatar URL",
         avatar_src: "Аватар",
-        medium: "Medium",
+        medium: "Тип",
         threepids: "3PIDs",
         address: "Адреса",
         creation_ts_ms: "Мітка часу створення",
@@ -201,7 +201,7 @@ const ua: SynapseTranslationMessages = {
       limits: {
         messages_per_second: "Повідомлень за секунду",
         messages_per_second_text: "Кількість дій, які можна виконати за секунду.",
-        burst_count: "Burst count",
+        burst_count: "Кількість пакетів",
         burst_count_text: "Скільки дій можна виконати до обмеження.",
       },
       account_data: {
@@ -281,15 +281,15 @@ const ua: SynapseTranslationMessages = {
       name: "Reported event |||| Reported events",
       fields: {
         id: "ID",
-        received_ts: "report time",
-        user_id: "announcer",
+        received_ts: "Час події",
+        user_id: "Автор",
         name: "name of the room",
         score: "score",
         reason: "reason",
         event_id: "event ID",
         event_json: {
           origin: "origin server",
-          origin_server_ts: "час відправки",
+          origin_server_ts: "Час відправки:",
           type: "event type",
           content: {
             msgtype: "content type",
@@ -403,8 +403,8 @@ const ua: SynapseTranslationMessages = {
     user_media_statistics: {
       name: "Медіа користувачів",
       fields: {
-        media_count: "Кількість файлів",
-        media_length: "Розмір файлів",
+        media_count: "Кількість медіафайлів",
+        media_length: "Розмір медіафайлів",
       },
     },
     forward_extremities: {
@@ -438,10 +438,10 @@ const ua: SynapseTranslationMessages = {
       },
     },
     room_directory: {
-      name: "Room directory",
+      name: "Каталог кімнат",
       fields: {
-        world_readable: "guest users may view without joining",
-        guest_can_join: "guest users may join",
+        world_readable: "гість може переглядати без приєднання",
+        guest_can_join: "гості можуть приєднатися",
       },
       action: {
         title: "Видалити кімнату з каталогу кімнат |||| Видалити %{smart_count} кімнати із каталогу кімнат",
@@ -454,29 +454,29 @@ const ua: SynapseTranslationMessages = {
       },
     },
     destinations: {
-      name: "Federation",
+      name: "Федерація",
       fields: {
-        destination: "Destination",
-        failure_ts: "Failure timestamp",
-        retry_last_ts: "Last retry timestamp",
-        retry_interval: "Retry interval",
-        last_successful_stream_ordering: "Last successful stream",
-        stream_ordering: "Stream",
+        destination: "Пункт призначення",
+        failure_ts: "Мітка часу помилки",
+        retry_last_ts: "Мітка часу останньої повторної спроби",
+        retry_interval: "Інтервал повторення",
+        last_successful_stream_ordering: "Остання успішна трансляція",
+        stream_ordering: "Трансляція",
       },
-      action: { reconnect: "Reconnect" },
+      action: { reconnect: "Повторне підключення" },
     },
     registration_tokens: {
-      name: "Registration tokens",
+      name: "Реєстраційні токени",
       fields: {
-        token: "Token",
-        valid: "Valid token",
-        uses_allowed: "Uses allowed",
-        pending: "Pending",
-        completed: "Completed",
-        expiry_time: "Expiry time",
-        length: "Length",
+        token: "Токен",
+        valid: "Дійсний токен",
+        uses_allowed: "Використання дозволено",
+        pending: "В очікуванні",
+        completed: "Завершений",
+        expiry_time: "Термін придатності",
+        length: "Довжина",
       },
-      helper: { length: "Length of the token if no token is given." },
+      helper: { length: "Довжина токена, якщо токен не вказано." },
     },
   },
 };
